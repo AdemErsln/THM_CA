@@ -60,10 +60,12 @@ void __stdcall main_render(IDirect3DDevice9* pDevice)
 		{
 			ImGui::SetNextWindowSize({ 730, 460 });
 			ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, { 0, 0 });
-			ImGui::Begin("MenuName", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings);
+			ImGui::Begin("Test", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoSavedSettings);
 			{
 				if (ImGui::CollapsingHeader("Player"))
 				{
+					ImGui::Checkbox("SpeedHack", &Features::Playermovement::SpeedHack);
+
 				}
 			}
 			ImGui::End();
